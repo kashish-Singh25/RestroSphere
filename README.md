@@ -495,52 +495,67 @@ Payment credentials and secret keys are kept outside the public repository using
 
 ---
 
-## Technology Stack
+## Local Development Setup
 
-### Frontend
+Follow these steps to run RestroSphere locally.
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Router
-- Framer Motion
-- Lucide React
-- Recharts
+### Prerequisites
 
-### Backend
+Make sure you have the following installed:
 
-- Node.js
-- Express.js
-- REST APIs
-- JWT-based authentication
-
-### Database
-
-- MongoDB
-- Mongoose
-
-### AI
-
-- Google Gemini API
-
-### Payments
-
-- Razorpay
-
-### Authentication
-
-- JWT
-- Google OAuth / Passport
-
-### Development Tools
-
+- Node.js and npm
+- MongoDB (local installation or MongoDB Atlas)
 - Git
-- GitHub
-- VS Code
-- npm
+- A Google Gemini API key for AI assistant features
 
----
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/kashish-Singh25/RestroSphere.git
+cd RestroSphere
+```
+
+### 2. Configure the Backend
+
+```bash
+cd server
+npm install
+```
+
+Create a `.env` file inside the `server` directory and configure the environment variables required by the application, including database connection, authentication, and API credentials.
+
+Use the exact variable names expected by the backend configuration.
+
+Start the backend:
+
+```bash
+npm run dev
+```
+
+### 3. Configure the Frontend
+
+Open a new terminal:
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+Vite will provide a local development URL in the terminal.
+
+### 4. Access the Application
+
+Open the local frontend URL provided by Vite in your browser.
+
+Make sure the backend server and MongoDB connection are running correctly.
+
+### Important Notes
+
+- Never upload `.env` files or expose API keys.
+- Configure MongoDB credentials before starting the backend.
+- Gemini and Razorpay credentials are required for their respective integrations.
+- Use separate terminals for frontend and backend development.
 
 ## Auhtor
 Niharika ( IGDTUW - B.Tech IT )
